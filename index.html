@@ -11,9 +11,9 @@
     <title>GitHub page as PWA template</title>
     <link
       rel="canonical"
-      href="https://mikeygloriani.github.io/ICS2O-Template-PWA/"
+      href="https://mikeygloriani.github.io/ICS2O-Unit-5-05-JS/"
     />
-    <link rel="manifest" href="/ICS2O-Template-PWA/manifest.webmanifest" />
+    <link rel="manifest" href="/ICS2O-Unit-5-05-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/style.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
@@ -64,12 +64,39 @@
           height="25%"
         />
         <p></p>
+        <p>Enter Side A</p>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="side-a">
+            <label class="mdl-textfield__label" for="sample2">A...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <p>Enter Side B</p>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="side-b">
+            <label class="mdl-textfield__label" for="sample2">B...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <p>Enter Side C</p>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="side-c">
+            <label class="mdl-textfield__label" for="sample2">C...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="myButtonClicked()"
         >
-          Say "Hello, World!"
+          Enter
         </button>
         <!-- basic text -->
         <p></p>
