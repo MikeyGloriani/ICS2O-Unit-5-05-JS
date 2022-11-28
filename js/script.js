@@ -13,10 +13,7 @@ if (navigator.serviceWorker) {
   })
 }
 
-
 /**
  * This function displays an alert.
  */
-function myButtonClicked() {
-
-}
+function myButtonClicked() {}
