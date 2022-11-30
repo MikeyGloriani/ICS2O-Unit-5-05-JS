@@ -27,8 +27,5 @@ function myButtonClicked() {
   if (sideA + sideB + sideC == 180) {
     document.getElementById("hello-world").innerHTML =
       "<p>This makes a triangle </p>"
-  } else {
-    document.getElementById("hello-world").innerHTML =
-      "<p>This is does not make a triangle </p>"
   }
 }
