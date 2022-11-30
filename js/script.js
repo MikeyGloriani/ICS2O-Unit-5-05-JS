@@ -13,9 +13,12 @@ if (navigator.serviceWorker) {
   })
 }
 
-var a = document.getElementById("side-a").innerHTML
-var b = document.getElementById("side-b").innerHTML
-var c = document.getElementById("side-c").innerHTML
+/**
+ * These are variables
+ */
+var sideA = parseFloat(document.getElementById("side-a"))
+var sideB = parseFloat(document.getElementById("side-b"))
+var sideC = parseFloat(document.getElementById("side-c"))
 
 /**
  * This function displays an alert.
@@ -26,6 +29,6 @@ function myButtonClicked() {
       "<p>This makes a triangle </p>"
   } else {
     document.getElementById("hello-world").innerHTML =
-      "<p>This is does not a triangle </p>"
+      "<p>This is does not make a triangle </p>"
   }
 }

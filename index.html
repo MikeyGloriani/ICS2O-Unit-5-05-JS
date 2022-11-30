@@ -64,48 +64,60 @@
           height="25%"
         />
         <p></p>
-        <p>Enter Side A length</p>
-        <!-- Numeric Textfield -->
-        <form action="#">
+          <!-- Numeric Textfield -->
+          <form action="#">
+          <p>Enter the side A angle</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
-              type="text"
+              type="number"
+              step=".01"
+              placeholder="e.g. 15"
               pattern="-?[0-9]*(\.[0-9]+)?"
               id="side-a"
+              aria-label="side-a"
             />
-            <label class="mdl-textfield__label" for="side-a">A...</label>
+            <label class="mdl-textfield__label" for="side-a"
+              >Side A...</label
+            >
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
-        </form>
-        <p>Enter Side B length</p>
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="side-b"
-            />
-            <label class="mdl-textfield__label" for="side-b">B...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-        <p>Enter Side C length</p>
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="side-c"
-            />
-            <label class="mdl-textfield__label" for="side-c">C...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
+          <!-- Numeric Textfield -->
+          <form action="#">
+            <p>Enter the side A angle</p>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input
+                class="mdl-textfield__input"
+                type="number"
+                step=".01"
+                placeholder="e.g. 15"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="side-b"
+                aria-label="side-b"
+              />
+              <label class="mdl-textfield__label" for="side-b"
+                >Side B...</label
+              >
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+          <!-- Numeric Textfield -->
+          <form action="#">
+            <p>Enter the side C angle</p>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input
+                class="mdl-textfield__input"
+                type="number"
+                step=".01"
+                placeholder="e.g. 15"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="side-c"
+                aria-label="side-c"
+              />
+              <label class="mdl-textfield__label" for="side-c"
+                >Side C...</label
+              >
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
