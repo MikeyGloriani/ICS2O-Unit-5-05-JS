@@ -13,7 +13,9 @@ if (navigator.serviceWorker) {
   })
 }
 
-var a = document.getElementById("side-a")
+var a = document.getElementById("side-a").innerHTML
+var b = document.getElementById("side-b").innerHTML
+var c = document.getElementById("side-c").innerHTML
 
 /**
  * This function displays an alert.
