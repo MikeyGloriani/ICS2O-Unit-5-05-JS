@@ -21,10 +21,10 @@ var c = document.getElementById("side-c").innerHTML
  * This function displays an alert.
  */
 function myButtonClicked() {
-  if (a+b+c == 180) {
+  if (a + b + c == 180) {
     document.getElementById("hello-world").innerHTML =
-    "<p>This makes a triangle </p>"
-  } else { 
+      "<p>This makes a triangle </p>"
+  } else {
     document.getElementById("hello-world").innerHTML =
       "<p>This is does not a triangle </p>"
   }
