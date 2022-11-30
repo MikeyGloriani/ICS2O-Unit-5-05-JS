@@ -24,7 +24,7 @@ var sideC = parseFloat(document.getElementById("side-c"))
  * This function displays an alert.
  */
 function myButtonClicked() {
-  if (a + b + c == 180) {
+  if (sideA + sideB + sideC == 180) {
     document.getElementById("hello-world").innerHTML =
       "<p>This makes a triangle </p>"
   } else {
