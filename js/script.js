@@ -13,6 +13,8 @@ if (navigator.serviceWorker) {
   })
 }
 
+var a = document.getElementById("side-a")
+
 /**
  * This function displays an alert.
  */
