@@ -40,7 +40,7 @@ function myButtonClicked() {
     Number(angleB.toFixed(2)) +
     Number(angleC.toFixed(2))
 
-  if (angleTotal = 180) {
+  if ((angleTotal = 180)) {
     if (angleA == angleB && angleC == angleB && angleA == angleC) {
       document.getElementById("hello-world").innerHTML =
         "<p>This is an equilateral triangle</p>"
