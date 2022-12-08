@@ -18,7 +18,7 @@ function myButtonClicked() {
   const lengthB = parseFloat(document.getElementById("side-b").value)
   const lengthC = parseFloat(document.getElementById("side-c").value)
 
-  // Cosine
+  // cosine law
   const angleA =
     Math.acos(
       (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
@@ -39,20 +39,20 @@ function myButtonClicked() {
     Number(angleA.toFixed(2)) +
     Number(angleB.toFixed(2)) +
     Number(angleC.toFixed(2))
-
-  if ((sumOfAngles = 180)) {
-    if (angleA == angleB && angleC == angleB && angleA == angleC) {
+    // checking for the sum of angles
+  if (sumOfAngles == 180) {
+    if (angleA == angleB && angleB == angleC && angleA == angleC) {
       document.getElementById("hello-world").innerHTML =
-        "<p>This is an equilateral triangle</p>"
-    } else if (angleA == angleB || angleC == angleB || angleA == angleC) {
+        "<p>The Type of Triangle is Equilateral.</p>"
+    } else if (angleA == angleB || angleB == angleC || angleA == angleC) {
       document.getElementById("hello-world").innerHTML =
-        "<p>This is an isoceles triangle.</p>"
+        "<p>The Type of Triangle is Isoceles.</p>"
     } else {
       document.getElementById("hello-world").innerHTML =
-        "<p>This is a scalene triangle.</p>"
+        "<p>The Type of Triangle is Scalene.</p>"
     }
   } else {
     document.getElementById("hello-world").innerHTML =
-      "<p>It doesn't add up to 180 degrees. Try different values.</p>"
+      "<p>This is not a triangle, since it's angles don't add up to 180°. Please Try again.</p>"
   }
 }
