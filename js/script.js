@@ -39,7 +39,7 @@ function myButtonClicked() {
     Number(angleA.toFixed(2)) +
     Number(angleB.toFixed(2)) +
     Number(angleC.toFixed(2))
-    // checking for the sum of angles
+  // checking for the sum of angles
   if (sumOfAngles == 180) {
     if (angleA == angleB && angleB == angleC && angleA == angleC) {
       document.getElementById("hello-world").innerHTML =
