@@ -20,41 +20,39 @@ function myButtonClicked() {
 
   // Cosine
   const angleA =
-  Math.acos(
-    (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
-  ) *
-  (180 / Math.PI)
+    Math.acos(
+      (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
+    ) *
+    (180 / Math.PI)
   const angleB =
-  Math.acos(
-    (lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)
-  ) *
-  (180 / Math.PI)
+    Math.acos(
+      (lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)
+    ) *
+    (180 / Math.PI)
   const angleC =
-  Math.acos(
-    (lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)
-  ) *
-  (180 / Math.PI)
-  
-  const angleTotal =
-  Number(angleA.toFixed(2)) +
-  Number(angleB.toFixed(2)) +
-  Number(angleC.toFixed(2))
+    Math.acos(
+      (lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)
+    ) *
+    (180 / Math.PI)
 
-  if (angleTotal = 180) {
+  const angleTotal =
+    Number(angleA.toFixed(2)) +
+    Number(angleB.toFixed(2)) +
+    Number(angleC.toFixed(2))
+
+  if ((angleTotal = 180)) {
     if (angleA == angleB && angleC == angleB && angleA == angleC) {
       document.getElementById("hello-world").innerHTML =
-      "<p>This is an equilateral triangle</p>"
-    }
-    else if (angleA == angleB || angleC == angleB || angleA == angleC) {
+        "<p>This is an equilateral triangle</p>"
+    } else if (angleA == angleB || angleC == angleB || angleA == angleC) {
       document.getElementById("hello-world").innerHTML =
-      "<p>This is an isoceles triangle.</p>"
-    }
-    else {
+        "<p>This is an isoceles triangle.</p>"
+    } else {
       document.getElementById("hello-world").innerHTML =
-      "<p>This is a scalene triangle.</p>"
+        "<p>This is a scalene triangle.</p>"
     }
   } else {
     document.getElementById("hello-world").innerHTML =
-  "<p>It doesn't add up to 180 degrees. Try different values.</p>"}
-
+      "<p>It doesn't add up to 180 degrees. Try different values.</p>"
+  }
 }
