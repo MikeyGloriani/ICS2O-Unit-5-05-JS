@@ -14,33 +14,33 @@ if (navigator.serviceWorker) {
 }
 
 function myButtonClicked() {
-  const aLength = parseFloat(document.getElementById("side-a").value)
-  const bLength = parseFloat(document.getElementById("side-b").value)
-  const cLength = parseFloat(document.getElementById("side-c").value)
+  const lengthA = parseFloat(document.getElementById("side-a").value)
+  const lengthB = parseFloat(document.getElementById("side-b").value)
+  const lengthC = parseFloat(document.getElementById("side-c").value)
 
   // Cosine
   const angleA =
     Math.acos(
-      (bLength ** 2 + cLength ** 2 - aLength ** 2) / (2 * bLength * cLength)
+      (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
     ) *
     (180 / Math.PI)
   const angleB =
     Math.acos(
-      (cLength ** 2 + aLength ** 2 - bLength ** 2) / (2 * cLength * aLength)
+      (lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)
     ) *
     (180 / Math.PI)
   const angleC =
     Math.acos(
-      (aLength ** 2 + bLength ** 2 - cLength ** 2) / (2 * aLength * bLength)
+      (lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)
     ) *
     (180 / Math.PI)
 
-  const angleTotal =
+  const sumOfAngles =
     Number(angleA.toFixed(2)) +
     Number(angleB.toFixed(2)) +
     Number(angleC.toFixed(2))
 
-  if ((angleTotal = 180)) {
+  if (sumOfAngles = 180) {
     if (angleA == angleB && angleC == angleB && angleA == angleC) {
       document.getElementById("hello-world").innerHTML =
         "<p>This is an equilateral triangle</p>"
