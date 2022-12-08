@@ -13,19 +13,48 @@ if (navigator.serviceWorker) {
   })
 }
 
-/**
- * These are variables
- */
-var sideA = parseFloat(document.getElementById("side-a"))
-var sideB = parseFloat(document.getElementById("side-b"))
-var sideC = parseFloat(document.getElementById("side-c"))
-
-/**
- * This function displays an alert.
- */
 function myButtonClicked() {
-  if (sideA + sideB + sideC == 180) {
+  const aLength = parseFloat(document.getElementById("side-a").value)
+  const bLength = parseFloat(document.getElementById("side-b").value)
+  const cLength = parseFloat(document.getElementById("side-c").value)
+
+  // Cosine
+  const angleA =
+  Math.acos(
+    (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
+  ) *
+  (180 / Math.PI)
+  const angleB =
+  Math.acos(
+    (lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)
+  ) *
+  (180 / Math.PI)
+  const angleC =
+  Math.acos(
+    (lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)
+  ) *
+  (180 / Math.PI)
+  
+  const angleTotal =
+  Number(angleA.toFixed(2)) +
+  Number(angleB.toFixed(2)) +
+  Number(angleC.toFixed(2))
+
+  if (angleTotal = 180) {
+    if (angleA == angleB && angleC == angleB && angleA == angleC) {
+      document.getElementById("hello-world").innerHTML =
+      "<p>This is an equilateral triangle</p>"
+    }
+    else if (angleA == angleB || angleC == angleB || angleA == angleC) {
+      document.getElementById("hello-world").innerHTML =
+      "<p>This is an isoceles triangle.</p>"
+    }
+    else {
+      document.getElementById("hello-world").innerHTML =
+      "<p>This is a scalene triangle.</p>"
+    }
+  } else {
     document.getElementById("hello-world").innerHTML =
-      "<p>This makes a triangle </p>"
-  }
+  "<p>It doesn't add up to 180 degrees. Try different values.</p>"}
+
 }
