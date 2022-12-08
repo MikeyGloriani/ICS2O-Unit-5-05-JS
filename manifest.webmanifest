@@ -1,7 +1,7 @@
 {
-    "name": "Template App Test",
-    "short_name": "Mikey's Test App",
-    "description": "Github Page for my template app",
+    "name": "Working with Triangles",
+    "short_name": "Mikey's Triangle",
+    "description": "Github Page for 5-05",
     "scope": "/ICS2O-Unit-5-05-JS/",
     "start_url": "/ICS2O-Unit-5-05-JS/",
     "background_color": "#ffffff",
