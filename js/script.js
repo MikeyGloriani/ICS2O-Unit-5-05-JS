@@ -20,21 +20,21 @@ function myButtonClicked() {
 
   // Cosine
   const angleA =
-    Math.acos(
-      (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
-    ) *
-    (180 / Math.PI)
+  Math.acos(
+    (bLength ** 2 + cLength ** 2 - aLength ** 2) / (2 * bLength * cLength)
+  ) *
+  (180 / Math.PI)
   const angleB =
-    Math.acos(
-      (lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)
-    ) *
-    (180 / Math.PI)
+  Math.acos(
+    (cLength ** 2 + aLength ** 2 - bLength ** 2) / (2 * cLength * aLength)
+  ) *
+  (180 / Math.PI)
   const angleC =
-    Math.acos(
-      (lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)
-    ) *
-    (180 / Math.PI)
-
+  Math.acos(
+    (aLength ** 2 + bLength ** 2 - cLength ** 2) / (2 * aLength * bLength)
+  ) *
+  (180 / Math.PI)
+  
   const angleTotal =
     Number(angleA.toFixed(2)) +
     Number(angleB.toFixed(2)) +
