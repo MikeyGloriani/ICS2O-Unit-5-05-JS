@@ -13,12 +13,16 @@ if (navigator.serviceWorker) {
   })
 }
 
+/**
+ * This function will determine the type of triangle.
+ */
+
 function myButtonClicked() {
   const lengthA = parseFloat(document.getElementById("side-a").value)
   const lengthB = parseFloat(document.getElementById("side-b").value)
   const lengthC = parseFloat(document.getElementById("side-c").value)
 
-  // cosine law
+  // using the cosine law
   const angleA =
     Math.acos(
       (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
@@ -39,20 +43,20 @@ function myButtonClicked() {
     Number(angleA.toFixed(2)) +
     Number(angleB.toFixed(2)) +
     Number(angleC.toFixed(2))
-  // checking for the sum of angles
+
   if (sumOfAngles == 180) {
     if (angleA == angleB && angleB == angleC && angleA == angleC) {
-      document.getElementById("hello-world").innerHTML =
-        "<p>The Type of Triangle is Equilateral.</p>"
+      document.getElementById("triangle").innerHTML =
+        "<p>This is an Equilateral Triangle.</p>"
     } else if (angleA == angleB || angleB == angleC || angleA == angleC) {
-      document.getElementById("hello-world").innerHTML =
-        "<p>The Type of Triangle is Isoceles.</p>"
+      document.getElementById("triangle").innerHTML =
+        "<p>This is an Isoceles Triangle.</p>"
     } else {
-      document.getElementById("hello-world").innerHTML =
-        "<p>The Type of Triangle is Scalene.</p>"
+      document.getElementById("triangle").innerHTML =
+        "<p>This is an Scalene Triangle.</p>"
     }
   } else {
-    document.getElementById("hello-world").innerHTML =
-      "<p>This is not a triangle, since it's angles don't add up to 180°. Please Try again.</p>"
+    document.getElementById("triangle").innerHTML =
+      "<p>Does not add up to 180 degrees. Try different values</p>"
   }
 }
